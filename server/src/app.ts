@@ -27,7 +27,6 @@ export function buildApp() {
     decorateReply: false,
   });
 
-  app.get('/', async (_request, reply) => reply.sendFile('index.html'));
   app.get('/game', async (_request, reply) => reply.redirect('/game/'));
 
   return app;
