@@ -46,15 +46,18 @@ export default function App() {
           <small>População 1.284 · Felicidade 86%</small>
         </div>
 
-        <div className="city-board" aria-label="Área reservada para a arte PNG isométrica da cidade">
-          <div className="terrain-ring" />
+        <div className="city-board" aria-label="Cidade isométrica de Aurora">
+          <img
+            className="city-base-image"
+            src="/assets/world/city-base/city-base-aurora-v01.png"
+            alt="Base isométrica da cidade Aurora"
+          />
           {buildings.map(([id, name, level], index) => (
             <button className={`building building-${index + 1}`} type="button" key={id}>
               <span className="building-shape">🏛️</span>
               <span className="building-label"><strong>{name}</strong><small>{level}</small></span>
             </button>
           ))}
-          <p className="art-note">Área da futura cidade isométrica em PNG</p>
         </div>
 
         <div className="queue-card">
