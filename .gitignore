@@ -6,3 +6,12 @@ dist/
 coverage/
 .DS_Store
 *.log
+
+# Native Windows client
+client/build/
+*.exe
+*.pdb
+*.ilk
+*.obj
+*.lib
+*.dll
