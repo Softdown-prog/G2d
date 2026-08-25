@@ -1,0 +1,11 @@
+{
+  "name": "g2d",
+  "private": true,
+  "workspaces": ["game", "server"],
+  "scripts": {
+    "dev:game": "npm run dev --workspace game",
+    "dev:server": "npm run dev --workspace server",
+    "build": "npm run build --workspace game && npm run build --workspace server",
+    "test": "npm run test --workspace game && npm run test --workspace server"
+  }
+}
