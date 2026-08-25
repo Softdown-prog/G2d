@@ -10,6 +10,7 @@ RUN npm install
 COPY game ./game
 COPY server ./server
 COPY site ./site
+COPY assets ./assets
 
 RUN npm run build
 
@@ -27,6 +28,7 @@ RUN npm install --omit=dev
 COPY --from=build /app/server/dist ./server/dist
 COPY --from=build /app/game/dist ./game-dist
 COPY --from=build /app/site ./site
+COPY --from=build /app/assets ./assets
 
 EXPOSE 8080
 CMD ["node", "server/dist/server.js"]
