@@ -8,6 +8,7 @@ const __dirname = path.dirname(__filename);
 const appRoot = path.resolve(__dirname, '..', '..');
 const siteRoot = path.join(appRoot, 'site');
 const gameRoot = path.join(appRoot, 'game-dist');
+const assetsRoot = path.join(appRoot, 'assets');
 
 export function buildApp() {
   const app = Fastify({ logger: true });
@@ -24,6 +25,12 @@ export function buildApp() {
   app.register(fastifyStatic, {
     root: gameRoot,
     prefix: '/game/',
+    decorateReply: false,
+  });
+
+  app.register(fastifyStatic, {
+    root: assetsRoot,
+    prefix: '/assets/',
     decorateReply: false,
   });
 
